@@ -142,7 +142,7 @@ def process_map(file_in, pretty = False):
         for _, element in ET.iterparse(file_in):
             el = shape_element(element)
             if el:
-                print el
+                print(el)
                 data.append(el)
                 if pretty:
                     fo.write(json.dumps(el, indent=2)+"\n")
@@ -177,6 +177,7 @@ def test():
                                       }
     assert data[-1]["node_refs"] == [ "2199822281", "2199822390",  "2199822392", "2199822369",
                                     "2199822370", "2199822284", "2199822281"]
+
 
 if __name__ == "__main__":
     test()

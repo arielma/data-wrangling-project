@@ -6,7 +6,8 @@ import xml.etree.ElementTree as ET  # Use cElementTree or lxml if too slow
 OSM_FILE = "melbourne_australia.osm"  # Replace this with your osm file
 SAMPLE_FILE = "sample.osm"
 
-k = 1000 # Parameter: take every k-th top level element
+# Parameter: take every k-th top level element
+k = 50
 
 
 def get_element(osm_file, tags=('node', 'way', 'relation')):
