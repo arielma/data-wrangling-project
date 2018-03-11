@@ -78,11 +78,24 @@ def shape_element(element):
         for child in element:
             if child.tag == 'nd':
                 node_refs.append(child.attrib['ref'])
-            else:
-                if problemchars.search(child.attrib['k']):
+            elif child.tag == 'tag':
+                if child.attrib['k'] == 'amenity':
+                    node['amenity'] = child.attrib['v']
+                elif child.attrib['k'] == 'cuisine':
+                    node['cuisine'] = child.attrib['v']
+                elif child.attrib['k'] == 'name':
+                    node['name'] = child.attrib['v']
+                elif child.attrib['k'] == 'phone':
+                    node['phone'] = child.attrib['v']
+                elif child.attrib['k'] == 'website':
+                    node['website'] = child.attrib['v']
+                elif child.attrib['k'] == 'opening_hours':
+                    node['opening_hours'] = child.attrib['v']
+                elif problemchars.search(child.attrib['k']):
                     pass
                 elif child.attrib['k'].startswith('addr:') and lower_colon.search(child.attrib['k']):
                     address[child.attrib['k'].split(':')[1]] = child.attrib['v']
+
         if address:
             node['address'] = address
         if node_refs:
@@ -112,5 +125,4 @@ def process_map(file_in, pretty = False):
 
 if __name__ == '__main__':
     data = process_map(OSMFILE, True)
-    pprint.pprint(data)
 

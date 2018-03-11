@@ -4,3 +4,5 @@
 [4]https://stackoverflow.com/questions/39337042/elementtree-remove-element
 [5]https://stackoverflow.com/questions/8347048/camelcase-every-string-any-standard-library
 [6]https://stackoverflow.com/questions/222375/elementtree-xpath-select-element-based-on-attribute
+[7]https://docs.mongodb.com/getting-started/shell/
+[8]https://docs.mongodb.com/manual/reference/mongo-shell/
