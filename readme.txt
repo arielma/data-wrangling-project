@@ -4,6 +4,9 @@ This is the directory of all case study quizzes
 
 ##Files
 
+Data Wrangling Project.pdf
+Documenting my work of the project.
+
 map_region.txt
 A description of the map area I am using and the download link of the OSM file.
 
