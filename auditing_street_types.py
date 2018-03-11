@@ -48,6 +48,7 @@ street_type_mapping = { "Ave": "Avenue",
             }
 
 
+# add the street name containing wrong street type into map where key is the wrong street type.
 def audit_street_type(street_types, street_name):
     m = street_type_re.search(street_name)
     if m:
@@ -84,15 +85,6 @@ def update_name(name, mapping):
 def test():
     st_types = audit_street_types(OSMFILE)
     pprint.pprint(dict(st_types))
-
-    # for st_type, ways in st_types.iteritems():
-    #     for name in ways:
-    #         better_name = update_name(name, street_type_mapping)
-    #         print(name, "=>", better_name)
-    #         if name == "West Lexington St.":
-    #             assert better_name == "West Lexington Street"
-    #         if name == "Baldwin Rd.":
-    #             assert better_name == "Baldwin Road"
 
 
 if __name__ == '__main__':

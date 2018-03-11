@@ -1,0 +1,6 @@
+[1]http://www.corra.com.au/australian-postcode-location-data/
+[2]https://stackoverflow.com/questions/41794319/elementtree-replace-tag-attribute-and-update-file
+[3]https://stackoverflow.com/questions/43034876/create-list-of-unique-values-from-xml-child-node-values-using-python-3-x
+[4]https://stackoverflow.com/questions/39337042/elementtree-remove-element
+[5]https://stackoverflow.com/questions/8347048/camelcase-every-string-any-standard-library
+[6]https://stackoverflow.com/questions/222375/elementtree-xpath-select-element-based-on-attribute

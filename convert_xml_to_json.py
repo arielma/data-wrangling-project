@@ -1,6 +1,6 @@
 import xml.etree.cElementTree as ET
 import auditing_street_types
-import auditing_suburb_names
+import auditing_suburb_city_names
 
 import re
 import codecs
@@ -25,10 +25,10 @@ def update_street_type(street_address):
     return street_address
 
 
-# Update wrong city/suburb names based on map created in auditing_suburb_names.py
+# Update wrong city/suburb names based on map created in auditing_suburb_city_names.py
 def update_suburb_name(suburb_name):
-    if suburb_name in auditing_suburb_names.suburb_name_mapping:
-        suburb_name = auditing_suburb_names.suburb_name_mapping[suburb_name]
+    if suburb_name in auditing_suburb_city_names.suburb_name_mapping:
+        suburb_name = auditing_suburb_city_names.suburb_name_mapping[suburb_name]
     return suburb_name
 
 
@@ -37,7 +37,7 @@ def update_addr(element):
         for tag in element.iter("tag"):
             if auditing_street_types.is_street_name(tag):
                 tag.attrib['v'] = update_street_type(tag.attrib['v'])
-            elif auditing_suburb_names.is_suburb_name(tag):
+            elif auditing_suburb_city_names.is_suburb_name(tag):
                 tag.attrib['v'] = update_suburb_name(tag.attrib['v'])
 
 

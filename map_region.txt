@@ -1,0 +1,2 @@
+I will use map of Melbourne for this project as I am now living and working in Melbourne and I would like to make contribution to building an accurate and robust OSM data for the city.
+The link I used to download the file is https://s3.amazonaws.com/metro-extracts.mapzen.com/melbourne_australia.osm.bz2

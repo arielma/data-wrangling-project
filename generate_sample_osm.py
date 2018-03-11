@@ -7,7 +7,7 @@ OSM_FILE = "melbourne_australia.osm"  # Replace this with your osm file
 SAMPLE_FILE = "sample.osm"
 
 # Parameter: take every k-th top level element
-k = 50
+k = 100
 
 
 def get_element(osm_file, tags=('node', 'way', 'relation')):
